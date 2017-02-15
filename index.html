@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html ng-app="angularD3">
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="charts/styles.css">
+    <title>Angular and D3js Resuable and Responsive Charts</title>
+</head>
+
+<body ng-controller="chartsCtrl">
+    	<div class="row" id="charts">
+	        <div class="bar-chart col-md-6" id="firstChart" bar-chart speed="7000" data="barChartData" event="hover">
+	        </div>
+	        <div pie class="pie-chart col-md-6" bindto="firstChart" id="secondChart" data="barChartData" event="hover">
+	        </div>
+    	</div>
+
+    <!-- Node modules files -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/d3/d3.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/lodash/lodash.min.js"></script>
+
+    <!-- Application files -->
+    <script src="app.js"></script>
+    <script src="charts/chartCtrl.js"></script>
+    <script src="charts/pieChart/pieChartDir.js"></script>
+    <script src="charts/barChart/barChartDir.js"></script>
+</body>
+
+</html>
